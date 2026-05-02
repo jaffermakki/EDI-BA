@@ -1673,15 +1673,12 @@ async function buildDocument() {
               border: { top: { style: BorderStyle.SINGLE, size: 6, color: C.accent, space: 1 } },
               children: [
                 new TextRun({ text: 'EDI BA Training Guide — Production Ready  |  Page ', color: C.light, size: 18, font: 'Arial' }),
-                new TextRun({ children: [new PageNumber.current()], color: C.accent, size: 18, font: 'Arial', bold: true }),
+                new TextRun({ children: [PageNumber.CURRENT], color: C.accent, size: 18, font: 'Arial', bold: true }),
               ]
             })
           ]
         })
       },
-      children: allSections
-    }]
-  });
 
   const buffer = await Packer.toBuffer(doc);
   fs.writeFileSync('./EDI_BA_Complete_Training_Guide_2026.docx', buffer);
