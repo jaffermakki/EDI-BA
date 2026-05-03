@@ -1673,7 +1673,7 @@ async function buildDocument() {
               border: { top: { style: BorderStyle.SINGLE, size: 6, color: C.accent, space: 1 } },
               children: [
                 new TextRun({ text: 'EDI BA Training Guide — Production Ready  |  Page ', color: C.light, size: 18, font: 'Arial' }),
-                new TextRun({ children: [PageNumber.CURRENT], color: C.accent, size: 18, font: 'Arial', bold: true }),
+                new TextRun({ children: [PageNumber.current], color: C.accent, size: 18, font: 'Arial', bold: true }),
               ]
             })
           ]
